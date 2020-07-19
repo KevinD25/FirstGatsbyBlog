@@ -10,8 +10,9 @@ export default function About() {
     <UserContext.Provider value={{value, setValue}}>
       <Layout>
         <Contextex></Contextex>
-
-        <p>Kevin Davis</p>
+        
+        <p style={{borderTop:`1px solid`, paddingTop: `10px` }}>Small project to use the basics of react hooks</p>
+        <p style={{fontSize:`80%`}}>Made by Kevin Davis</p>
       </Layout>
     </UserContext.Provider>
   )

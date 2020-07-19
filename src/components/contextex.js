@@ -9,7 +9,7 @@ export function Contextex() {
       <p>
         Used context hook to pass data through components instead of drilling
       </p>
-      <button onClick={() => setValue("hey")}>change value</button>
+      <button onClick={() => setValue("Pointbreak.co")}>change value</button>
     </div>
   )
 }
