@@ -15,7 +15,7 @@ export default function Comments() {
   const classes = useStyles()
   const [comments, setComments] = useState([])
   const [input, setInput] = useState()
-  const [users, setUser] = useState([]) 
+  const [users, setUser] = useState([])
 
   useEffect(() => {
     if (comments.length > 0) {
@@ -25,35 +25,41 @@ export default function Comments() {
           //console.log(res.data.results)
         })
         .catch(err => {})
-
     }
   }, [comments]) //Gets called whenever comments changes
 
   function handleClick() {
     setComments(comments => [...comments, input]) //spread operator, wrapped
     //console.log(comments + " CLICKED")
-    if(input==="red"){
-        const newContext = React.createContext({color: 'red'});
-    }
   }
 
   return (
     <div>
-        <p>Comments tracked with useState and avatar fetched in useEffect</p>
+      <p>Comments tracked with useState and avatar fetched in useEffect</p>
       <div>
-        <input onChange={event => setInput(event.target.value)} />
-        <Button
+        <form action="/action_page.php">
+          
+          <input
+            onChange={event => setInput(event.target.value)}
+            className={styles.input}
+          />
+          
+          <Button
           variant="contained"
           color="primary"
           className={classes.button}
           endIcon={<SendIcon />}
           onClick={handleClick}
+          type="reset"
         >
           Post
         </Button>
+        </form>
+
+        
       </div>
 
-      <div >
+      <div>
         {users.map((user, i) => {
           return (
             <div key={i} className={styles.line}>
@@ -63,13 +69,14 @@ export default function Comments() {
                 className={styles.avatar}
               />
               {comments.map((comment, j) => {
-                  if(i===j){
-                      return (
-                  <div key={j} className={styles.comment} >
-                    <p className={styles.excerpt}>{comment}</p>
-                  </div>
-                )
-                  }            
+                if (i === j) {
+                  return (
+                    <div key={j} className={styles.comment}>
+                      <p className={styles.excerpt}>{comment}</p>
+                    </div>
+                  )
+                }
+                return null
               })}
             </div>
           )

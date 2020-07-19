@@ -11,7 +11,7 @@ export default function About() {
       <Layout>
         <Contextex></Contextex>
         
-        <p style={{borderTop:`1px solid`, paddingTop: `10px` }}>Small project to use the basics of react hooks</p>
+        <p style={{borderTop:`1px solid`, paddingTop: `10px` }}>Small project to use the basics of react hooks and understand other Reactjs and Gatsby functionalities.</p>
         <p style={{fontSize:`80%`}}>Made by Kevin Davis</p>
       </Layout>
     </UserContext.Provider>
