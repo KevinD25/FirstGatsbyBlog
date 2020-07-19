@@ -1,0 +1,17 @@
+.article{
+margin: 20px 0;
+border: 1px solid black;
+padding: 12px;
+}
+
+.header{
+margin-bottom: 10px;
+}
+
+.content{
+padding: 12px;
+}
+
+.link{
+    text-align: center;
+}

@@ -1,0 +1,25 @@
+.line{
+    display:flex;
+    align-items: center;
+    margin: 0 auto 12px auto;
+}
+
+.line:last-child{
+    margin-bottom: 0;
+}
+
+.avatar{
+    flex: 0 0 96px;
+    width: 65px;
+    height: 65px;
+    margin: 0;
+    float:left;
+}
+
+.comment{
+    flex: 1;
+    margin-left: 18px;
+    padding: 12px;
+}
+
+
